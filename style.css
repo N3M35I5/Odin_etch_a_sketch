@@ -16,7 +16,8 @@
 {
     flex: auto;
 }
-.bclr
+.on
 {
-    background-color: black;
+    background-color: aqua;
+    border-color: gray;
 }

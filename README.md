@@ -4,4 +4,5 @@ Features to add
 * clear button - done
 * invert button - done
 * slider for grid size
-* eraser
+* eraser - done
+* random colors when drawing
