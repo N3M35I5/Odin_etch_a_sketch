@@ -22,13 +22,17 @@ function sketch(gridSize=16)
     {
         col.addEventListener('mouseover',()=>
         {
-            //console.log(col);
-            col.classList.add('bclr');
+            if(eraserOn==true)
+                col.classList.remove('bclr');
+            else
+                col.classList.add('bclr');
+
         });
     });
 }
 
 let size = 16;
+let eraserOn=false;
 
 const container=document.querySelector('#container');
 
@@ -46,6 +50,7 @@ clearBtn.addEventListener('click',()=>{
     cols.forEach((col)=>{
         col.classList.remove('bclr');
     });
+    eraserOn=false;
 });
 
 const invertBtn = document.querySelector('#invert');
@@ -54,4 +59,12 @@ invertBtn.addEventListener('click',()=>{
     cols.forEach((col)=>{
         col.classList.toggle('bclr');
     });
+});
+
+const eraserBtn = document.querySelector('#eraser');
+eraserBtn.addEventListener('click',()=>{
+    if(eraserOn)
+        eraserOn=false;
+    else
+        eraserOn=true;
 });
