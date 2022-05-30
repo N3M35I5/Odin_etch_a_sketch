@@ -36,7 +36,6 @@ function sketch(gridSize=16)
             }
             else
                 col.style.background=bclr;
-
         });
     });
 }

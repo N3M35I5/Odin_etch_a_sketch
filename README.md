@@ -6,3 +6,5 @@ Features to add
 * slider for grid size
 * eraser - done
 * random colors when drawing
+* shader
+* lighter
