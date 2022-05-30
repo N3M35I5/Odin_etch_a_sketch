@@ -40,3 +40,18 @@ gridBtn.addEventListener('click',()=>
 });
 
 sketch();
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click',()=>{
+    const cols = document.querySelectorAll('.column');
+    cols.forEach((col)=>{
+        col.classList.remove('bclr');
+    });
+});
+
+const invertBtn = document.querySelector('#invert');
+invertBtn.addEventListener('click',()=>{
+    const cols = document.querySelectorAll('.column');
+    cols.forEach((col)=>{
+        col.classList.toggle('bclr');
+    });
+});
