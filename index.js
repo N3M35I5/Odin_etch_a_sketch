@@ -20,7 +20,7 @@ function sketch(gridSize=16)
     const cols = document.querySelectorAll('.column');
     cols.forEach((col)=>
     {
-        col.addEventListener('mouseover',()=>
+        col.addEventListener('mousedown',(e)=>
         {
             if(eraserOn)
             {
@@ -36,6 +36,29 @@ function sketch(gridSize=16)
             }
             else
                 col.style.background=bclr;
+            
+        });
+
+        col.addEventListener('mouseover',(e)=>
+        {
+            console.log(e)
+            if(e.buttons>0)
+            {
+                if(eraserOn)
+                {
+                    col.style.background=eraserClr;
+                }
+                else if(multiColorOn)
+                {
+                    let x = Math.floor(Math.random() * 256);
+                    let y = Math.floor(Math.random() * 256);
+                    let z = Math.floor(Math.random() * 256);
+                    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+                    col.style.background = bgColor;
+                }
+                else
+                    col.style.background=bclr;
+            }
         });
     });
 }
