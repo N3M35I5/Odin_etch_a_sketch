@@ -8,6 +8,7 @@ function sketch(gridSize=16)
         {
             const col = document.createElement('div');
             col.classList.add('column');
+            col.style.background=eraserClr;
             row.appendChild(col);
         }
         if(i==0)
