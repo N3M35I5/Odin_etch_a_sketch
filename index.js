@@ -42,9 +42,9 @@ function sketch(gridSize=16)
 
         col.addEventListener('mouseover',(e)=>
         {
-            console.log(e)
-            if(e.buttons>0)
-            {
+            //console.log(e)
+            //if(e.buttons>0)
+            //{
                 if(eraserOn)
                 {
                     col.style.background=eraserClr;
@@ -59,7 +59,7 @@ function sketch(gridSize=16)
                 }
                 else
                     col.style.background=bclr;
-            }
+            //}
         });
     });
 }
